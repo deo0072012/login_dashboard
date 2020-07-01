@@ -8,6 +8,11 @@ import { LayoutComponent } from './layout/layout.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+
+
 
 
 
@@ -18,6 +23,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CommonModule,
     MatSidenavModule,
     FormsModule,
+    MatIconModule,
+    MatDividerModule,
+    MatListModule,
     MatToolbarModule
   ]
 })

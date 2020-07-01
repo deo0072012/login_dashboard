@@ -1,26 +1,49 @@
-<mat-sidenav-container>
-    <mat-sidenav [(opened)]="opened">
-        <mat-toolbar color="lightcoral" >
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            DASHBOARD<br>
-            PATCH MANAGEMENT <br>
-            Managed files<br>
-            Run Commands <br>
-            Remote Management<br>
-            Jobs<br>
-            settings<br>
-        </mat-toolbar>
-
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+        [attr.role]="'navigation'"
+        mode="'over'"
+        opened="false">
+      <mat-toolbar>
+        <a class="home-button" routerLink="/">
+            <img class="app-logo" src="assets\image\hash.png" />
+        </a>
+      </mat-toolbar>
+      <mat-nav-list >
+        <a class="navigation-item">
+            <mat-icon class="material-icons">dashboard</mat-icon><span class="navigation-item-label">DASHBOARD</span>
+          </a>
+        <a class="navigation-item" mat-list-item routerLink="/route1" routerLinkActive="active">
+          <mat-icon class="material-icons">assignment</mat-icon><span class="navigation-item-label">Managed files</span>
+        </a>
+        <mat-divider ></mat-divider>
+        <a class="navigation-item" mat-list-item routerLink="/route2" routerLinkActive="active">
+          <mat-icon class="material-icons">how_to_reg</mat-icon><span class="navigation-item-label">Run commands</span>
+        </a>
+        <a class="navigation-item" mat-list-item routerLink="/route3" routerLinkActive="active">
+          <mat-icon class="material-icons">build</mat-icon><span class="navigation-item-label">Remote management</span>
+        </a>
+        <a class="navigation-item" mat-list-item routerLink="/route4" routerLinkActive="active">
+            <mat-icon class="material-icons">access_time</mat-icon><span class="navigation-item-label">Crontab editor</span>
+          </a>
+          <a class="navigation-item" mat-list-item routerLink="/route5" routerLinkActive="active">
+            <mat-icon class="material-icons">business</mat-icon><span class="navigation-item-label">Jobs</span>
+          </a>
+          
+          <a class="navigation-item" mat-list-item routerLink="/route6" routerLinkActive="active">
+            <mat-icon class="material-icons">settings</mat-icon><span class="navigation-item-label">Settings</span>
+          </a>
+      </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content>
-        <mat-toolbar >DASHBOARD<br></mat-toolbar>
-        
-
-        <button (click)="opened=!opened">>></button>
+    <mat-sidenav-content class="sidenav-content">
+      <mat-toolbar class="sidenav-content-toolbar" color="primary">
+        <button mat-icon-button class="menu-button" type="button" aria-label="Toggle sidenav" (tap)="drawer.toggle()">
+          <i class="material-icons">menu</i>
+        </button>
+        <span class="filler">
+            <!-- You can place a search bar here or anything you like -->
+        </span>
+      </mat-toolbar>
+      
+      
     </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-sidenav-container>
